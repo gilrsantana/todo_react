@@ -1,3 +1,26 @@
+# Configurações do projeto
+
+- Criar o projeto: 
+`npx create-react-app todo`
+
+- Instalar as dependências:  
+`npm install json-server react-icons`
+
+## Criar as referências para o json-server
+- Em package.json criar a linha abaixo no conjunto de scripts
+`"server": "json-server --watch data/db.json --port 5000"`
+
+- Na raiz do projeto criar a pasta data e dentro dela o arquivo db.json. Este arquivo  simulará a resposta de uma api retornando o objeto json descrito dentro desse arquivo. A depedência json-server executará esta função.
+
+```
+    {
+        "todos": []
+    }
+```
+- Rodar o comando para iniciar o json-server na porta 5000: `npm run server`
+
+- O retorno do arquivo db.json pode ser visto no endereço: `http://localhost:5000/todos`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
